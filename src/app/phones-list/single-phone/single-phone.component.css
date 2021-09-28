@@ -1,0 +1,35 @@
+.sidebarNav{
+    background-color: white;
+    width: 250px;
+    height: 350px;
+    margin-right: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.card-principal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 80px;
+}
+.card-view{
+    width: 540px;
+    height: 355px;
+    margin-top: 15px;
+}
+h5{
+    color: #7C83FD;
+}
+ul{
+    list-style: none;
+    line-height: 3rem;
+}
+ul li::before {
+    content: "\2022";
+    color: #7C83FD;
+    font-weight: bold;
+    display: inline-block; 
+    width: 1em;
+  }

@@ -1,0 +1,32 @@
+  <div class="card-principal">
+    <div class="sidebarNav">
+        <h5>Services</h5>
+        <ul>
+            <li>Nouvautés</li>
+            <li>Iphones</li>
+            <li>Cables</li>
+            <li>Accessoires</li>
+            <li>Réparations</li>
+        </ul>
+    </div>
+    <div class="card mb-3 card-view">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img *ngIf="!phone.photo" src="../../assets/phone.png" class="card-img-top" alt="...">
+          <img *ngIf="phone.photo" [src]="phone.photo" class="card-img-top" alt="...">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title">{{phone.name}}</h5>
+            <p class="card-text">{{phone.description}}</p>
+            <p class="card-text"><small class="text-muted">{{phone.price}} FCFA</small></p>
+          </div>
+          <div class="card-footer bg-transparent border-success">
+              <button class="btn btn-dark" (click)="onBack()">retour</button>
+          </div>
+        </div>
+      </div>
+    </div> 
+   
+  </div>
+  

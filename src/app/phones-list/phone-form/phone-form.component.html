@@ -1,0 +1,35 @@
+<div class="row">
+    <div class="col-sm-8 col-sm-offset-2">
+      <h2>Enregistrer un nouveau Iphone</h2>
+      <form [formGroup]="phoneForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+          <label for="title">Nom</label>
+          <input type="text" id="title"
+                 class="form-control" formControlName="name">
+        </div>
+        <div class="form-group">
+          <label for="price">Prix</label>
+          <input type="number" id="author"
+                 class="form-control" formControlName="price">
+        </div>
+        <div class="form-group">
+          <label for="synopsis">Description</label>
+          <textarea id="synopsis"
+                    class="form-control" formControlName="description">
+          </textarea>
+        </div>
+
+        <div class="form-group">
+          <h4>Ajouter une photo</h4>
+          <input type="file" (change)="detectFiles($event)"
+                 class="form-control" accept="image/*">
+          <p class="text-success" *ngIf="fileUploaded">Fichier chargé !</p>
+       </div>
+       
+        <button class="btn btn-success" [disabled]="phoneForm.invalid"
+                type="submit">Enregistrer
+        </button>
+  
+      </form>
+    </div>
+  </div>

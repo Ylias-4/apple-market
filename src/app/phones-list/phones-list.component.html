@@ -1,0 +1,33 @@
+  <div class="card-principal">
+    <div class="sidebarNav">
+        <h5>Services</h5>
+        <ul>
+            <li>Nouvautés</li>
+            <li>Iphones</li>
+            <li>Cables</li>
+            <li>Accessoires</li>
+            <li>Réparations</li>
+            <li> <button class="btn btn-primary" (click)="onNewPhone()">Nouveau IPhone</button></li>
+        </ul>
+    </div>
+    <div class="phone-list">
+            <div class="card" style="width: 15rem; height:22rem; margin-right: 10px;margin-bottom: 60px;" *ngFor="let phone of phones; let i = index">
+              <img *ngIf="!phone.photo" src="../../assets/phone.png" class="card-img-top" alt="...">
+              <img *ngIf="phone.photo" [src]="phone.photo">
+              <div class="card-body">
+                <p class="card-text"><small class="text-muted">{{phone.name}}</small></p>
+                <p style="color: crimson;">{{phone.price}} FCFA</p>
+              </div>
+              <div class="card-footer bg-light border-success d-flex justify-content-between">
+                  <button class="btn btn-primary" (click)="onViewBook(i)">
+                      view</button>
+
+                  <button class="btn btn-danger" (click)="onDeletePhone(phone)">
+                    Supprimer
+                  </button>
+              </div>
+            </div>
+    </div>
+   
+  </div>
+  
